@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="UnicoreSoftwareSolutions.Base.Web" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\USS.TharaStore.ServiceDefaults\USS.TharaStore.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\USS.TharaStore.Service\USS.TharaStore.Service.csproj" />
+  </ItemGroup>
+
+</Project>
