@@ -12,7 +12,16 @@ namespace USS.TharaStore.ApiService
         public static void AddServiceDI(this IServiceCollection services)
         {
 
-
+            
+            services.AddScoped<IProductData, ProductData>();
+            services.AddScoped<IProductBusiness, ProductBusiness>();
+            
+            services.AddScoped<IStockGroupData, StockGroupData>();
+            services.AddScoped<IStockGroupBusiness, StockGroupBusiness>();
+            
+            services.AddScoped<IUOMData, UOMData>();
+            services.AddScoped<IUOMBusiness, UOMBusiness>();
+            
         }
     }
 }

@@ -1,0 +1,16 @@
+@page "/Grid/Product"
+@inherits BaseWeb<Product>
+
+@rendermode InteractiveServer
+
+<h3>ProductGrid</h3>
+
+<USS_Grid @bind-Values="Datas" 
+          IsAction="true" 
+          IdVisible="false"
+          OnAdd="@( x => { Add(); })" 
+          OnCancel="@( (BaseGridModel<Product> x) => { Cancel(x); })"
+          OnEdit="@( (BaseGridModel<Product> x) => { Edit(x); })"
+          OnSave="@( (BaseGridModel<Product> x) => { Save(x); })"
+          OnDelete="@( (BaseGridModel<Product> x) => { Delete(x); })"
+          OnDeleteClose="@( ( string x)=>{ OnDeleteClose(x);})" />

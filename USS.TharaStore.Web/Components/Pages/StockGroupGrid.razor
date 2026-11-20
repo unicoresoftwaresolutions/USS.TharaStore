@@ -1,0 +1,16 @@
+@page "/Grid/StockGroup"
+@inherits BaseWeb<StockGroup>
+
+@rendermode InteractiveServer
+
+<h3>StockGroupGrid</h3>
+
+<USS_Grid @bind-Values="Datas" 
+          IsAction="true" 
+          IdVisible="false"
+          OnAdd="@( x => { Add(); })" 
+          OnCancel="@( (BaseGridModel<StockGroup> x) => { Cancel(x); })"
+          OnEdit="@( (BaseGridModel<StockGroup> x) => { Edit(x); })"
+          OnSave="@( (BaseGridModel<StockGroup> x) => { Save(x); })"
+          OnDelete="@( (BaseGridModel<StockGroup> x) => { Delete(x); })"
+          OnDeleteClose="@( ( string x)=>{ OnDeleteClose(x);})" />

@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+
+using Microsoft.EntityFrameworkCore;
 using USS.TharaStore.Model;
 
 namespace USS.TharaStore.Data
 {
-    public class MainDBContext : DbContext
+    public partial class MainDBContext : DbContext
     {
         public MainDBContext(DbContextOptions<MainDBContext> options)
             : base(options)
@@ -11,6 +12,9 @@ namespace USS.TharaStore.Data
 
         }
 
-
+        public DbSet<Product> Product { get; set; }
+        public DbSet<StockGroup> StockGroup { get; set; }
+        public DbSet<UOM> UOM { get; set; }
+    
     }
 }

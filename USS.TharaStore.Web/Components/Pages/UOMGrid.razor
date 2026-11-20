@@ -1,0 +1,16 @@
+@page "/Grid/UOM"
+@inherits BaseWeb<UOM>
+
+@rendermode InteractiveServer
+
+<h3>UOMGrid</h3>
+
+<USS_Grid @bind-Values="Datas" 
+          IsAction="true" 
+          IdVisible="false"
+          OnAdd="@( x => { Add(); })" 
+          OnCancel="@( (BaseGridModel<UOM> x) => { Cancel(x); })"
+          OnEdit="@( (BaseGridModel<UOM> x) => { Edit(x); })"
+          OnSave="@( (BaseGridModel<UOM> x) => { Save(x); })"
+          OnDelete="@( (BaseGridModel<UOM> x) => { Delete(x); })"
+          OnDeleteClose="@( ( string x)=>{ OnDeleteClose(x);})" />
